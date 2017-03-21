@@ -17,4 +17,5 @@ class Instrument(models.Model):
     ('violin','Violin')
     )
 
+    
     instrument_choice= models.CharField(max_length="25", choices=INSTRUMENT_CHOICES)
