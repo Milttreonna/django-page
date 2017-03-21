@@ -1,0 +1,88 @@
+@font-face {
+    font-family: inherit;
+    src: url("rock.ttf") font-weight: bold;
+}
+
+body {
+    background-color: #008F95;
+    color: #5F0F4E;
+    font-family: 'Slabo 27px', serif;
+}
+
+h1 {
+    font-size: 500%;
+    font-family: "rock";
+    color: #5F0F4E;
+    text-shadow: 5px 5px 5px #423463;
+}
+
+.about {
+    width: 500px;
+    border: 25px solid #64CCCC;
+    padding: 50px;
+    box-shadow: 5px 5px 5px  #423463;
+    background-color: #5F0F4E;
+}
+
+.totalButton {
+    font-family: 'Slabo 27px', serif;
+    font-size: 100%;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 5px;
+    border: 3px solid #64CCCC;
+    padding: 2px;
+    background-color: #64CCCC;
+}
+
+.aboutRent {
+  color:#5F0F4E ;
+    font-family: 'Slabo 27px', serif;
+    font-size: 17px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 5px;
+    border: 3px solid #64CCCC;
+    padding: 4px;
+    background-color: #64CCCC;
+}
+
+.aboutBody {color: #64CCCC;
+}
+
+.photo {
+    max-width: 400px;
+    max-height:500px;
+    min-width:20px;
+    min-height: 20px;
+    border: solid;
+    border-width: 30px;
+    border-radius: 20px;
+    border-color: #64CCCC;
+}
+.github{height:50px;width:50px;}
+
+ul {float: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #008F95;
+}
+
+li {
+  float: right;
+}
+ .cart{height:15px; width:15px; }
+
+li a {
+
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+
+}
+
+li a:hover:not(.active) {
+    background-color: #64CCCC;
+    color: #5F0F4E;
+}

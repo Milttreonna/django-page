@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-
+# http://localhost:8000/instrurent_app/index right
+# http://127.0.0.1:8000/instrurent_app/index.html wrong
 urlpatterns = [
     url(r'^instrurent_app/', include('instrurent_app.urls')),
     url(r'^admin/', admin.site.urls),
+    
 ]
