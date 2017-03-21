@@ -1,1 +1,355 @@
-Oh hello!
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Rent Instrument</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'decor/style.css' %}">
+</head>
+
+<div class="container">
+  <!--<ul>
+    <center>
+      <li><a href="" id="checkout" onclick="show_cart_total()"> Checkout</a></li>
+    <li><a id="complete_total" >Cart</a></li>
+      <li><a href="https://milttreonna.github.io/instrurent-page/instrurent" >Rent</a></li>
+    <li><a href="https://milttreonna.github.io/instrurent-page/">About</a></li>
+
+
+  </center>
+  </ul>-->
+  <br/>
+    <center>
+
+            <h1><u>Instru-Rent</u></h1><br/>
+
+        <body>
+
+            <br/>
+            <div class="row">
+                <div class="clarinet">
+                    <div class="col-xs-12 col-sm-6 col-lg-8">
+                        <img class="photo" src="{% static 'decor/images/clarinet.jpg' %}" alt="clarinet">
+                        <h2>Clarinet</h2>
+                        <p>Key: Bb / Fingering: Boehm / Key System: 17 keys, 6 rings / Barrel Length: 56.5mm / Body Material Grenadilla / Barrel Material: Grenadilla / Bell Material: Grenadilla (no metal bell rim) / Key Material: Nickel silver / Bore: Machined
+                            and polished / Tone Holes: Tapered integral type with hand-sculpted undercut / Thumb Rest: Fixed / Mouthpiece: 5CM Ebonite / Mouthpiece Cap: Silver-plated / Ligature: Silver-plated / Spring Type: Blue steel needle / Pad Type:
+                            Lucien deluxe with nylon button <br/> Comes with case
+                        </p>
+                        <h3> In stock:<div id="clarinet_stock"> 200 </div> </h3>
+                    </div>
+                    
+
+                    <div class="col-xs-6 col-lg-4">
+                        <br/><br/>
+                        <h4> Price to rent (per week): $152.36</h4>
+                        <br/>
+                        <p>
+                            <h4>How many weeks?</h4><br/>
+                             <input type="number" id="clarinetWeeks" min="1" max="3" value="1">
+                                 <button class="aboutRent" onclick="clarinetTotal()">Total </button>
+
+                            <h3>Complete total:</h3><div id="clarinetTotal"> </div>
+
+                        </p>
+
+                        <button class="aboutRent"onclick="add_to_cart()" >Add to cart </button>
+                    </div>
+                </div>
+            </div>
+
+
+<!---->
+
+            <hr/>
+            <div class="row">
+                <div class="aguitar">
+                    <div class="col-xs-12 col-sm-6 col-lg-8">
+                        <img class="photo" src="{% static 'decor/images/aguitar.jpg' %}" alt="acoustic guitar">
+                        <h2>Acoustic Guitar</h2>
+                        <p>Easy-playing dreadnought / Solid spruce top with scalloped / Quartersawn "X" bracing / Re-shaped pickguard and rosewood bridge / 3mm dot fingerboard markers / Mother-of-pearl acrylic rosette / Mahogany back and sides / Mahogany
+                            neck with 20-fret rosewood fretboard / Neck and body binding / Graphtech Nubone nut and compensated bridge saddle / Includes gig bag, chromatic electronic tuner, strings, picks and strap /
+                        </p>
+                        <h3> In stock: <div id="aguitar_stock"> 200 </div> </h3>
+                    </div>
+                    
+
+                    <div class="col-xs-6 col-lg-4">
+                        <br/><br/>
+                        <h4> Price to rent (per week): $57.20</h4>
+                        <br/>
+                        <p>
+                            <h4>How many weeks?</h4><br/>
+                             <input type="number" id="aguitarWeeks" min="1" max="3" value="1">
+                                 <button class="aboutRent" onclick="aguitarTotal()">Total </button>
+
+                            <h3>Complete total:</h3><div id="aguitarTotal"> </div>
+                        </p>
+
+                        <button class="aboutRent"onclick="add_to_cart()" >Add to cart </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <hr/>
+            <div class="row">
+                <div class="banjo">
+                    <div class="col-xs-12 col-sm-6 col-lg-8">
+                        <img class="photo" src="{% static 'decor/images/banjo.jpg' %}" alt="banjo">
+                        <h2>Banjo</h2>
+                        <p>Neck: Blond Slender Rock Maple Neck / 22 Pressed In Nickel Silver Frets / Hardwood Bow Tie Inlays / Sealed Geared Tuners / Geared 5th String Tuner / Durable Satin Finish / Deering Fiddle Shaped Peghead / Pot:Blond 3-ply Violin
+                            Grade Maple Rim / Steel Tension Hoop / 11" Frosted Top High Crown Head / 5/8" Maple/Ebony Goodtime Bridge / 16 Flat Hooks with 9/32" Nuts / 16 Bracket Shoes with Screw Attachments / Deering Patented Goodtime Tailpiece / Steel
+                            Coordinator Rod for Adjustments / Durable Satin Finish / Openback
+                            <r/> Includes case
+                        </p>
+                        <h3> In stock: <div id="banjo_stock"> 200 </div> </h3>
+                    </div>
+                    
+
+                    <div class="col-xs-6 col-lg-4">
+                        <br/><br/>
+                        <h4> Price to rent (per week): $62.27</h4>
+                        <br/>
+                        <p>
+                            <h4>How many weeks?</h4><br/>
+                             <input type="number" id="banjoWeeks" min="1" max="3" value="1">
+                                 <button class="aboutRent" onclick="banjoTotal()">Total </button>
+
+                            <h3>Complete total:</h3><div id="banjoTotal"> </div>
+                        </p>
+
+                        <button class="aboutRent"onclick="add_to_cart()" >Add to cart </button>
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+            <div class="row">
+                <div class="conga">
+                    <div class="col-xs-12 col-sm-6 col-lg-8">
+                        <img class="photo" src="{% static 'decor/images/conga.jpg' %}" alt="conga">
+                        <h2>Conga Set</h2>
+                        <p>Chinese maple shells, 10" & 11" heads, 28" high The Synergy Bongo set features quality 2-ply select wood shells, black powder-coated hardware, and natural rawhide heads
+                        </p>
+                        <h3> In stock: <div id="conga_stock"> 200 </div> </h3>
+                    </div>
+                     
+
+                    <div class="col-xs-6 col-lg-4">
+                        <br/><br/>
+                        <h4> Price to rent (per week): $35.10</h4>
+                        <br/>
+                        <p>
+                            <h4>How many weeks?</h4><br/>
+                             <input type="number" id="congaWeeks" min="1" max="3" value="1">
+                                 <button class="aboutRent" onclick="congaTotal()">Total </button>
+
+                            <h3>Complete total:</h3><div id="congaTotal"> </div>
+                        </p>
+
+                        <button class="aboutRent"onclick="add_to_cart()" >Add to cart </button>
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+            <div class="row">
+                <div class="drum">
+                    <div class="col-xs-12 col-sm-6 col-lg-8">
+                        <img class="photo" src="{% static 'decor/images/drums.jpg' %}" alt="drums">
+                        <h2>Drum Set</h2>
+                        <p>Great for the beginner or the working professional. The staggered diagonal seam allows a thin drum shell that will start round and stay round. The low-mass lugs lets the shell vibrate for superb tone and sustain. The Air Seal System
+                            used for drum shell construction ensures each and every drum shell is of uniform thickness and is perfectly round to achieve superior tone quality and durability. - Features a beautiful high-gloss lacquer finish. Hardware and
+                            cymbals sold separately.100% Birch Shell Bass drum 7-ply, 7mm100% Birch toms, floor tom, snare 6-ply, 6mm - YESS tom mounting system - Absolute-style lugs low mass lugs - Air Seal System shells45-Degree bearing edge - Matching
+                            wood bass drum hoops - Die-cast bass drum claws1.6mm steel hoops - Lacquer finish Comes with a pair of rack toms, a floor tom, snare drum, and bass drum
+                        </p>
+                        <h3> In stock: <div id="drum_stock"> 200 </div> </h3>
+                    </div>
+                    
+
+                    <div class="col-xs-6 col-lg-4">
+                        <br/><br/>
+                        <h4> Price to rent (per week): $118.30</h4>
+                        <br/>
+                        <p>
+                            <h4>How many weeks?</h4><br/>
+                             <input type="number" id="drumWeeks" min="1" max="3" value="1">
+                                 <button class="aboutRent" onclick="drumTotal()">Total </button>
+
+                            <h3>Complete total:</h3><div id="drumTotal"> </div>
+                        </p>
+
+                        <button class="aboutRent"onclick="add_to_cart()" >Add to cart </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <hr/>
+            <div class="row">
+                <div class="eguitar">
+                    <div class="col-xs-12 col-sm-6 col-lg-8">
+                        <img class="photo" src="{% static 'decor/images/eguitar.jpg' %}" alt="electric guitar">
+                        <h2>Electric Guitar</h2>
+                        <p> Body Type: Solidbody | Body Shape: Eclipse | Right-handed | Number of Strings: 6 | Body Material: Mahogany | Color: Vintage Black | Neck Material: Mahogany, set-in Neck Shape: Thin "U" |Fingerboard Material: Rosewood | Number of
+                            Frets: 24, extra-jumbo | Scale Length: 24.75" | Nut Width: 1.65" | Nut Material: Molded | Bridge/Tailpiece: Tonepros locking TOM bridge and tailpiece | Tuners: Locking tuners | Number of Pickups: 2 | Neck Pickup: Seymour Duncan
+                            '59 Humbucker | Bridge Pickup: Seymour Duncan JB Humbucker | Controls:2 x volume, master tone, 3-way selector | Strings:(.010-.046)
+                        </p>
+                        <h3> In stock: <div id="eguitar_stock"> 200 </div> </h3>
+                    </div>
+                    
+
+                    <div class="col-xs-6 col-lg-4">
+                        <br/><br/>
+                        <h4> Price to rent (per week): $117.00</h4>
+                        <br/>
+                        <p>
+                            <h4>How many weeks?</h4><br/>
+                             <input type="number" id="eguitarWeeks" min="1" max="3" value="1">
+                                 <button class="aboutRent" onclick="eguitarTotal()">Total </button>
+
+                            <h3>Complete total:</h3><div id="eguitarTotal"> </div>
+                        </p>
+
+                        <button class="aboutRent"onclick="add_to_cart()" >Add to cart </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <hr/>
+            <div class="row">
+                <div class="piano">
+                    <div class="col-xs-12 col-sm-6 col-lg-8">
+                        <img class="photo" src="{% static 'decor/images/piano.jpg' %}" alt="piano">
+                        <h2>Piano</h2>
+                        <p>Perfect for beginning students and experienced players alike, the ARIUS / YDP series provides true piano sound and feel. The Graded Hammer keyboard makes it a true joy to play, both in practice and in performance. The 3-level AWM
+                            Dynamic Stereo Sampling Voices deliver remarkably authentic sound, and YDP-181 incorporates a USB device port for storing songs recorded on the instrument. Moreover, the damper pedal includes a half-damper effect, giving you
+                            nuanced expressive control over the sustained sound. Dual Voice capability lets you play two different instrument sounds at the same time, while a 2-track song recorder allows you to capture your original musical ideas and
+                            performances.
+                        </p>
+                        <h3> In stock: <div id="piano_stock"> 200 </div> </h3>
+                    </div>
+                    
+
+                    <div class="col-xs-6 col-lg-4">
+                        <br/><br/>
+                        <h4> Price to rent (per week): $221.13</h4>
+                        <br/>
+                        <p>
+                            <h4>How many weeks?</h4><br/>
+                             <input type="number" id="pianoWeeks" min="1" max="3" value="1">
+                                 <button class="aboutRent" onclick="pianoTotal()">Total </button>
+
+                            <h3>Complete total:</h3><div id="pianoTotal"> </div>
+                        </p>
+
+                        <button class="aboutRent"onclick="add_to_cart()" >Add to cart </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <hr/>
+            <div class="row">
+                <div class="saxophone">
+                    <div class="col-xs-12 col-sm-6 col-lg-8">
+                        <img class="photo" src="{% static 'decor/images/sax.jpg' %}" alt="saxophone">
+                        <h2>Saxophone</h2>
+                        <p>Key of Eb / Constructed from Yellow brass / Nickel silver keys / Redesigned neck receiver / Drawn tone holes / Stainless steel springs / Waterproof leather pads / Adjustable plastic thumb hook / Includes case and 4C mouthpiece
+                            with cap and ligature</p>
+                            <h3> In stock: <div id="saxophone_stock"> 200 </div> </h3>
+                    </div>
+                    
+
+                    <div class="col-xs-6 col-lg-4">
+                        <br/><br/>
+                        <h4> Price to rent (per week): $410.02</h4>
+                        <br/>
+                        <p>
+                            <h4>How many weeks?</h4><br/>
+                             <input type="number" id="saxWeeks" min="1" max="3" value="1">
+                                 <button class="aboutRent" onclick="saxTotal()">Total </button>
+
+                            <h3>Complete total:</h3><div id="saxTotal"> </div>
+                        </p>
+
+                        <button class="aboutRent"onclick="add_to_cart()" >Add to cart </button>
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+            <div class="row">
+                <div class="trumpet">
+                    <div class="col-xs-12 col-sm-6 col-lg-8">
+                        <img class="photo" src="{% static 'decor/images/trumpet.jpg' %}" alt="trumpet">
+                        <h2>Trumpet</h2>
+                        <p>Key: Bb / Bore: .445-inch Stepped Bore / Leadpipe: One-Piece Drawn / Leadpipe Material: Gold Brass / Bell: 5-inch One-Piece Hammered / Bell Material: Yellow Brass / Valves: Monel Piston / 1st Valve Slide Adjustment: Thumb Saddle
+                            / 3rd Valve Slide Adjustment: Fixed Ring / Features: One-Piece Drawn Gold Brass Leadpipe; Stepped Bore with Large Bore Tuning Slide; One-Piece Hammered Bell with Large Bell Flair; Lightweight Body Design / Case: Deluxe Wood
+                            Case / Mouthpiece: Bobby Shew Signature
+                        </p>
+                        <h3> In stock: <div id="trumpet_stock"> 200 </div> </h3>
+                    </div>
+                    
+
+                    <div class="col-xs-6 col-lg-4">
+                        <br/><br/>
+                        <h4> Price to rent (per week): $317.07</h4>
+                        <br/>
+                        <p>
+                            <h4>How many weeks?</h4><br/>
+                             <input type="number" id="trumpetWeeks" min="1" max="3" value="1">
+                                 <button class="aboutRent" onclick="trumpetTotal()">Total </button>
+
+                            <h3>Complete total:</h3><div id="trumpetTotal"> </div>
+                        </p>
+
+                        <button class="aboutRent"onclick="add_to_cart()" >Add to cart </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <hr/>
+            <div class="row">
+                <div class="violin">
+                    <div class="col-xs-12 col-sm-6 col-lg-8">
+                        <img class="photo" src="{% static 'decor/images/violin.jpg' %}" alt="violin">
+                        <h2>Violin</h2>
+                        <p>With 5 strings, the Violina 5-string violin spans the range of both a violin and viola, allowing cross-trained violinists/violists to play and carry a single instrument. Violina features 5 strings”like a violin with additional
+                            C string, or a viola with a "power E string”. Top string has fine tuner. <br/>comes with: bow, case, violin</p>
+                    <h3> In stock: <div id="violin_stock"> 200 </div> </h3>
+                    </div>
+                    
+
+                    <div class="col-xs-6 col-lg-4">
+                        <br/><br/>
+                        <h4> Price to rent (per week): $91.00</h4>
+                        <br/>
+                        <p>
+                            <h4>How many weeks?</h4><br/>
+                             <input type="number" id="violinWeeks" min="1" max="3" value="1">
+                                 <button class="aboutRent" onclick="violinTotal()">Total </button>
+
+                            <h3>Complete total:</h3><div id="violinTotal"> </div>
+                        </p>
+
+                        <button class="aboutRent"onclick="add_to_cart()" >Add to cart </button>
+                    </div>
+
+                </div>
+            </div>
+             <script src="instrurent.js"></script>
+        </body>
+
+
+    </center>
+</div>
+
+</html>

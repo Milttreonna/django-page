@@ -6,5 +6,5 @@ from django.http import HttpResponse
 def index(request):
     return render(request, "rentPage/index.html")
 
-# def rent(request):
-#     return render(request, "rentPage/rent.html")
+def rent(request):
+    return render(request, "rentPage/rent.html")
