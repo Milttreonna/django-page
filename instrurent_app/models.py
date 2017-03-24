@@ -22,7 +22,11 @@ class Instrument(models.Model):
     instrument_choice= models.CharField(max_length=25, choices=INSTRUMENT_CHOICES)
     instrument_quantity= models.IntegerField(default=200)
 
-    
+    def rent_item():
+        instrument_quantity-=1
+        
+
+
     # instrument_price=models.CharField(max_length=100)
 
     # def __str__(self):

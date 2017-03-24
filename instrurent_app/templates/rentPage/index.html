@@ -2,14 +2,16 @@
 
 
 <link rel="stylesheet" type="text/css" href="{% static 'decor/style.css' %}" />
-<title> About Instru-Rent</title>
+<title> Inventory</title>
+<center>
+<h1><u>Instru-Rent</u></h1>
 {% if instruments %}
 
-<center>
+
 <ul>
     {% for i in instruments %}
     
-           <h3> {{i.instrument_choice}} : {{i.instrument_quantity}}</h3> <button class="aboutRent" >Rent! </button>
+           <h3> {{i.instrument_choice}} : {{i.instrument_quantity}} in stock</h3> <button class="aboutRent" >Rent </button>
             <br/>
 
             <!--{{book.title}}-->
