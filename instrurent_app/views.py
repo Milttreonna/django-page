@@ -15,4 +15,4 @@ def index(request):
 
 
 def rent(request):
-    return render(request, "rentPage/rent.html", )
+    return render(request, "rentPage/rent.html" )
