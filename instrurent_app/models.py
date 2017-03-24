@@ -1,11 +1,11 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from django.template.defaulttags import register
+
 
 # http://localhost:8000/instrurent_app/index right
 # # Create your models here.
-class Inventory(models.Model):
+class Instrument(models.Model):
     INSTRUMENT_CHOICES=(
     ('clarinet','Clarinet'),
     ('acoustic guitar','Acoustic Guitar'),
@@ -20,9 +20,16 @@ class Inventory(models.Model):
     )
 
     instrument_choice= models.CharField(max_length=25, choices=INSTRUMENT_CHOICES)
-    def __str__(self):
-        return self.instrument_choice
+    instrument_quantity= models.IntegerField(default=200)
 
+    
+    # instrument_price=models.CharField(max_length=100)
+
+    # def __str__(self):
+    #     return self.instrument_choice
+
+    # def __str__(self)
+    # r
 
 # #try __init__
 

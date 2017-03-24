@@ -5,15 +5,18 @@
 <title> About Instru-Rent</title>
 {% if instruments %}
 
+<center>
 <ul>
     {% for i in instruments %}
     
-            {{i.instrument_choice}}
+           <h3> {{i.instrument_choice}} : {{i.instrument_quantity}}</h3> <button class="aboutRent" >Rent! </button>
+            <br/>
 
             <!--{{book.title}}-->
      <!--print my_dict['a']['c'] is {{my_dict.a.c}} -->
     {% endfor %}
 </ul>
+</center>
              {% else %}
 <p>NONE</p>
 {% endif %}
