@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-
+from django.template.defaulttags import register
 
 # http://localhost:8000/instrurent_app/index right
 # # Create your models here.
@@ -22,6 +22,7 @@ class Inventory(models.Model):
     instrument_choice= models.CharField(max_length=25, choices=INSTRUMENT_CHOICES)
     def __str__(self):
         return self.instrument_choice
+
 
 # #try __init__
 
