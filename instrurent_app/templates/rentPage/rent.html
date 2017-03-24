@@ -1,2 +1,28 @@
 {% load static %}
 
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'decor/style.css' %}" />
+<title> Inventory</title>
+<center>
+<h1><u>Instru-Rent</u></h1>
+{% if instruments %}
+
+
+<ul>
+    {% for i in instruments %}
+    
+           <h3> {{i.instrument_choice}} : {{i.instrument_quantity}} in stock</h3> 
+           <!--<form action="{% url instrument_app/rent %}" method="POST">-->
+           <form>
+               <input type="submit" value="Rent" class="aboutRent"> 
+               </input>
+           </form>
+            <br/>
+
+    {% endfor %}
+</ul>
+</center>
+             {% else %}
+<p>NONE</p>
+{% endif %}
