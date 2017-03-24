@@ -23,8 +23,13 @@ class Instrument(models.Model):
     instrument_quantity= models.IntegerField(default=200)
 
     def rent_item():
-        instrument_quantity-=1
+        if instrument_quantity>0:
+           return instrument_quantity-=1
+       else:
+           return "Sorry, all of those items are out of stock"
         
+    
+
 
 
     # instrument_price=models.CharField(max_length=100)
