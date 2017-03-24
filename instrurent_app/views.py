@@ -13,5 +13,6 @@ def index(request):
     instruments=Instrument.objects.all()
     return render(request, "rentPage/index.html", {'instruments':instruments})
 
+
 def rent(request):
-    return render(request, "rentPage/rent.html")
+    return render(request, "rentPage/rent.html", )

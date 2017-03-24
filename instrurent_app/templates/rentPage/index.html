@@ -11,11 +11,9 @@
 <ul>
     {% for i in instruments %}
     
-           <h3> {{i.instrument_choice}} : {{i.instrument_quantity}} in stock</h3> <button class="aboutRent" >Rent </button>
+           <h3> {{i.instrument_choice}} : {{i.instrument_quantity}} in stock</h3> <form><input type="submit" value="Rent" class="aboutRent" > </input></form>
             <br/>
 
-            <!--{{book.title}}-->
-     <!--print my_dict['a']['c'] is {{my_dict.a.c}} -->
     {% endfor %}
 </ul>
 </center>

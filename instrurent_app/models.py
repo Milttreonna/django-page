@@ -22,12 +22,16 @@ class Instrument(models.Model):
     instrument_choice= models.CharField(max_length=25, choices=INSTRUMENT_CHOICES)
     instrument_quantity= models.IntegerField(default=200)
 
-    def rent_item():
-        if instrument_quantity>0:
-           return instrument_quantity-=1
-       else:
+    def rent_item(self):
+        if self.instrument_quantity>0:
+           self.instrument_quantity-=1
+           return self.instrument_quantity
+        else:
            return "Sorry, all of those items are out of stock"
-        
+    
+    def __str__(self):
+        return self.instrument_choice
+
     
 
 
