@@ -1,6 +1,27 @@
 {% load static %}
 
+
 <link rel="stylesheet" type="text/css" href="{% static 'decor/style.css' %}" />
+<title> About Instru-Rent</title>
+{% if instruments %}
+
+<ul>
+    {% for i in instruments %}
+    
+            {{i.instrument_choice}}
+
+            <!--{{book.title}}-->
+     
+    {% endfor %}
+</ul>
+             {% else %}
+<p>NONE</p>
+{% endif %}
+
+
+
+
+<!--<link rel="stylesheet" type="text/css" href="{% static 'decor/style.css' %}" />
 <title> About Instru-Rent</title>
 <body class="aboutBody">
     <center>
@@ -18,4 +39,4 @@
          </a>
   </center>
 
-</body>
+</body>-->
