@@ -14,8 +14,7 @@ class Instrument(models.Model):
     instrument_image=models.CharField(max_length=300)
 
     def format_price(self):
-        instrument_price= round(self.instrument_price,2)
-        return "${0:.2f}".format(instrument_price)
+        return "${0:.2f}".format(self.instrument_price)
 
     def show_image(self):
         return 'decor/images/' + self.instrument_image
