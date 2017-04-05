@@ -10,6 +10,9 @@ class Instrument(models.Model):
     instrument_quantity= models.IntegerField(default=200)
     instrument_description = models.CharField(max_length= 2000)
     instrument_price= models.FloatField(max_length=None)
+    instrument_image=CharField(max_length=None)
+
+  
 
     def __str__(self):
         return self.instrument_choice
