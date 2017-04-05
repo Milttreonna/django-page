@@ -1,22 +1,21 @@
 {% load static %}
 
 <head>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="{% static 'decor/style.css' %}" />
-<title> Inventory</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'decor/style.css' %}" />
+    <title> Inventory</title>
 </head>
 
 <div class="container">
   <ul>
     <center>
-
        <li><a href="http://localhost:8000/instrurent_app/rent" >Rent</a></li>
     <li><a href="http://localhost:8000/instrurent_app/index">About</a></li>
 
-  </center>
+    </center>
   </ul>
-  <br/>
+<br/>
 
 <center>
 <h1><u>Instru-Rent</u></h1>
@@ -26,22 +25,21 @@
 <div class="row">
 
     <div class="col-xs-12 col-sm-6 col-lg-8">
-    <h2> {{i.instrument_choice}} </h2>
-    <h4> {{i.instrument_quantity}} in stock</h4> 
+        <h2> {{i.instrument_choice}} </h2>
+        <h4> {{i.instrument_quantity}} in stock</h4> 
 
-   <img class="photo" src='{% static i.show_image %}'> 
-    <p> {{ i.instrument_description }}</p>
+        <img class="photo" src='{% static i.show_image %}'> 
+        <p> {{ i.instrument_description }}</p>
     </div>
 
     <div class="col-xs-6 col-lg-4">
         <h4>Price to rent (per week):</h4>
-    <h3>{{ i.format_price }}</h3>
-    <br/>
-           <form method='get' action="{%url 'instrurent:rent_item' i.id %}">
-        
-    <input class= "aboutRent" type="submit" value="Rent Item" name="add"/>
-</form>
-</div>
+        <h3>{{ i.format_price }}</h3>
+        <br/>
+        <form method='get' action="{%url 'instrurent:rent_item' i.id %}">
+            <input class= "aboutRent" type="submit" value="Rent Item" name="add"/>
+        </form>
+    </div>
 
 </div>
       <hr/>
