@@ -1,9 +1,4 @@
 
-var instrument_cost= document.getElementById('PRICE');
-var weeks_value="";
-var customer_total="";
-var cart_total=0;
-
 
 function add_comma(x) {
      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
