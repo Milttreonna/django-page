@@ -38,7 +38,6 @@
         <h4>Price to rent (per week):</h4>
     <h3>{{ i.format_price }}</h3>
     <br/>
-
            <form method='get' action="{%url 'instrurent:rent_item' i.id %}">
                <!--{% csrf_token %}-->
     <input onclick="add_to_cart()" class= "aboutRent" type="submit" value="Rent Item" name="add"/>
