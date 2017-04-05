@@ -18,3 +18,9 @@ def rent(request):
     instruments=Instrument.objects.all()
     return render(request, "rentPage/rent.html", {'instruments':instruments})
 
+def rent_item(self):
+    if self.instrument_quantity>0:
+        self.instrument_quantity-=1
+        return self.instrument_quantity
+    else:
+        return "Sorry, all of those items are out of stock"
