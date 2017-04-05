@@ -27,7 +27,6 @@ var clarinetTotal = function() {
     weeks_value= document.getElementById("clarinetWeeks").value;
     customer_total=full_total(clarinet_cost).toFixed(2);
     document.getElementById("clarinetTotal").innerHTML="$"+customer_total;
-
 }
 
 
