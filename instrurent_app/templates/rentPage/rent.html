@@ -13,7 +13,7 @@
     
            <h3> {{i.instrument_choice}} : {{i.instrument_quantity}} in stock</h3> 
          
-           <form method='get' action="{%url instrurent:rent %}">
+           <form method='get' action="{%url 'instrurent:rent_item' i.id %}">
                <!--{% csrf_token %}-->
     <input type="submit" value="Rent Item" name="add"/>
 </form>
