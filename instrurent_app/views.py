@@ -12,7 +12,7 @@ def rent(request):
 
 def rent_item(request, id):
     item = Instrument.objects.get(pk=id)
-    if item.instrument_quantity > 0:
+    if item.instrument_quantity > 0 and item.instrument_quanti:
         item.instrument_quantity -= 1
     item.save()
     return redirect('instrurent:rent')
