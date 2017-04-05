@@ -6,6 +6,19 @@
 <link rel="stylesheet" type="text/css" href="{% static 'decor/style.css' %}" />
 <title> Inventory</title>
 </head>
+
+<div class="container">
+  <ul>
+    <center>
+      <li><a href="" id="checkout" onclick="show_cart_total()"> Checkout</a></li>
+    <li><a id="complete_total" >Cart</a></li>
+      <li><a href="https://milttreonna.github.io/instrurent-page/instrurent" >Rent</a></li>
+    <li><a href="https://milttreonna.github.io/instrurent-page/">About</a></li>
+
+  </center>
+  </ul>
+  <br/>
+
 <center>
 <h1><u>Instru-Rent</u></h1>
 {% if instruments %}
@@ -24,7 +37,9 @@
 
     {% endfor %}
 
-</center>
+
              {% else %}
 <p>NONE</p>
 {% endif %}
+</center>
+</div>
