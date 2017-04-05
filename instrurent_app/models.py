@@ -20,62 +20,8 @@ class Instrument(models.Model):
     )
 
     instrument_choice= models.CharField(max_length=25, choices=INSTRUMENT_CHOICES)
-    instrument_quantity= models.IntegerField(default=200)
+    instrument_quantity= models.IntegerField(max_length=200)
 
-    def rent_item(self):
-        if self.instrument_quantity>0:
-           self.instrument_quantity-=1
-           return self.instrument_quantity
-        else:
-           return "Sorry, all of those items are out of stock"
-    
     def __str__(self):
         return self.instrument_choice
 
-    
-
-
-
-    # instrument_price=models.CharField(max_length=100)
-
-    # def __str__(self):
-    #     return self.instrument_choice
-
-    # def __str__(self)
-    # r
-
-# #try __init__
-
-#     def __str__(self,name,instrument_choice):
-#         # self.name=name 
-#         return self.name, self.instrument_choice 
-# # class Choice(models.Model):
-
-
-# #Example  
-
-# class Inventory:
-#     def __init__(self , price, quantity, name):
-#         self.price=price
-#         self.quantity=quantity
-#         self.name=name
-    
-#     def sell(self):
-#         self.quantity-=1
-
-# snickers= Inventory(1.60, 2, "Snickers")
-# snickers.sell()
-# snickers.quantity()
-
-# class Book(models.Model):
-#     author=models.CharField(max_length=200)
-#     title=models.CharField(max_length=200)
-#     price=models.IntegerField()
-
-#     def __str__(self):
-#         return self.author
-
-
-# book=Book("John Greene", "TFIOS")
-# book.title()
-# book.authors()

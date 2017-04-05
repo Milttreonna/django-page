@@ -2,49 +2,23 @@
 
 
 <link rel="stylesheet" type="text/css" href="{% static 'decor/style.css' %}" />
-<title> Inventory</title>
-<center>
-<h1><u>Instru-Rent</u></h1>
-{% if instruments %}
+<title> About Instru-Rent </title>
 
-
-<ul>
-    {% for i in instruments %}
-    
-           <h3> {{i.instrument_choice}} : {{i.instrument_quantity}} in stock</h3> 
-           <!--You can find the other form tag in rent.html! -->
-           <form>
-               <input type="submit" value="Rent" class="aboutRent"> 
-               </input>
-           </form>
-            <br/>
-
-    {% endfor %}
-</ul>
-</center>
-             {% else %}
-<p>NONE</p>
-{% endif %}
-
-
-
-
-<!--<link rel="stylesheet" type="text/css" href="{% static 'decor/style.css' %}" />
-<title> About Instru-Rent</title>
 <body class="aboutBody">
     <center>
         <h1><u>Instru-Rent</u></h1>
         </br>
+
         <div class="about">
             <h2>About Instru-Rent</h2>
-            <h3>Instru-Rent is an instrument renting company from Water Valley, MS. The user can rent out an instrument of their choice for up to 3 weeks!
+            <h3>Instru-Rent is an instrument renting company from Water Valley, MS. The customer can rent out an instrument of their choice for up to 3 weeks!
         There are 10 different instruments on the site in all: pianos, acoustic guitars, electric guitars, conga sets, banjos, drum sets, violins, trumpets, saxophones, and clarinets. </h3>
-            <button class="aboutRent" ><a href="http://localhost:8000/instrurent_app/rent"> Rent an instrument</a></button>
+            <button class="aboutRent" ><a href=""> Change this button link</a></button>
         </div>
         <br/>
-        <a href="https://github.com/Milttreonna">
-         <img class="github"src="{% static 'decor/images/github.png' %}" alt="github">
-         </a>
-  </center>
+    
+    </center>
 
-</body>-->
+</body>
+</div>
+</html>

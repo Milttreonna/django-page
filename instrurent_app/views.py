@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # from .models import Book
 from .models import Instrument
+from django.contrib.auth.forms import UserCreationForm
+from django import forms
 # Create your views here.
 
 # def index(request):
@@ -10,9 +12,9 @@ from .models import Instrument
 
 
 def index(request):
-    instruments=Instrument.objects.all()
-    return render(request, "rentPage/index.html", {'instruments':instruments})
-
+    return render(request, "rentPage/index.html")
 
 def rent(request):
-    return render(request, "rentPage/rent.html")
+    instruments=Instrument.objects.all()
+    return render(request, "rentPage/rent.html", {'instruments':instruments})
+

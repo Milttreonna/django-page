@@ -1,7 +1,6 @@
 {% load static %}
 
 
-
 <link rel="stylesheet" type="text/css" href="{% static 'decor/style.css' %}" />
 <title> Inventory</title>
 <center>
@@ -13,12 +12,12 @@
     {% for i in instruments %}
     
            <h3> {{i.instrument_choice}} : {{i.instrument_quantity}} in stock</h3> 
-           <!--<form action="{% url instrument_app/rent %}" method="POST">-->
-           <form>
-               <input type="submit" value="Rent" class="aboutRent"> 
-               </input>
-           </form>
-            <br/>
+         
+           <form method='get' action="{%url 'rent' %}">
+               {% csrf_token %}
+    <input type="submit" value="add" name="add"/>
+</form>
+      
 
     {% endfor %}
 </ul>
@@ -26,3 +25,6 @@
              {% else %}
 <p>NONE</p>
 {% endif %}
+
+
+
