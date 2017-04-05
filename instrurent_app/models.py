@@ -15,7 +15,7 @@ class Instrument(models.Model):
 
     def format_price(self):
         instrument_price= round(self.instrument_price,2)
-        return instrument_price
+        return "${0:.2f}".format(instrument_price)
 
     def show_image(self):
         return 'decor/images/' + self.instrument_image
