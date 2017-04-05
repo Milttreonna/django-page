@@ -6,20 +6,18 @@
 <center>
 <h1><u>Instru-Rent</u></h1>
 {% if instruments %}
-
-
     {% for i in instruments %}
-    <h2> {{i.instrument_choice}} </h2>
-    <p> {{ i.instrument_description }}</p>
-    <h4>{{ i.instrument_price }}</h4>
-           <h3> {{i.instrument_quantity}} in stock</h3> 
 
-         
+    <h2> {{i.instrument_choice}} </h2>
+    <h4> {{i.instrument_quantity}} in stock</h4> 
+    <p> {{ i.instrument_description }}</p>
+    <h3>${{ i.instrument_price }}</h3>
+           
            <form method='get' action="{%url 'instrurent:rent_item' i.id %}">
                <!--{% csrf_token %}-->
-    <input type="submit" value="Rent Item" name="add"/>
+    <input class= "aboutRent" type="submit" value="Rent Item" name="add"/>
 </form>
-      
+      <hr/>
 
     {% endfor %}
 
