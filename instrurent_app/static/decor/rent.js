@@ -14,11 +14,3 @@ var item_total= function(){
   customer_total=full_total(instrument_cost).toFixed(2);
   document.getElementById("Total").innerHTML="$"+customer_total;
 }
-
-var add_to_cart = function(){
-     cart_total=Number(cart_total)
-     cart_total+=Number(customer_total)
-     cart_total=(cart_total.toFixed(2));
-     document.getElementById("complete_total").innerHTML="$"+add_comma(cart_total);
-    console.log(cart_total);
-    }
