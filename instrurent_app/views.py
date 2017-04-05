@@ -6,11 +6,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django import forms
 # Create your views here.
 
-# def index(request):
-#     books=Book.objects.all()
-#     return render(request, "rentPage/index.html", {'books':books})
-
-
 def index(request):
     return render(request, "rentPage/index.html")
 
