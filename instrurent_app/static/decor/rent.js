@@ -17,7 +17,7 @@ function show_cart_total() {alert("Thank you for renting with us! Your total was
 var item_total= function(){
   weeks_value= document.getElementById("Weeks").value;
   customer_total=full_total(instrument_cost).toFixed(2);
-    document.getElementById("Total").innerHTML="$"+customer_total;
+  document.getElementById("Total").innerHTML="$"+customer_total;
 }
 
 var add_to_cart = function(){
