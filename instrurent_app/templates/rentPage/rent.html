@@ -38,14 +38,7 @@
         <h4>Price to rent (per week):</h4>
     <h3>{{ i.format_price }}</h3>
     <br/>
-        <p>
-            <h4>How many weeks?</h4><br/>
-                <input type="number" id="Weeks" min="1" max="3" value="1">
-                    <button class="aboutRent" onclick="item_total()">Total </button>
 
-            <h3>Complete total:</h3><div id="Total"> </div>
-        </p>
-           
            <form method='get' action="{%url 'instrurent:rent_item' i.id %}">
                <!--{% csrf_token %}-->
     <input onclick="add_to_cart()" class= "aboutRent" type="submit" value="Rent Item" name="add"/>
