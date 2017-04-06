@@ -33,7 +33,7 @@ h1 {
     padding: 2px;
     background-color: #64CCCC;
 }
-.boxes {height: 500px; width:500px;}
+.boxes {width:500px; border-color: black; border-style:solid;}
 
 .aboutRent {
   color:#5F0F4E ;

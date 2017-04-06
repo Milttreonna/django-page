@@ -22,14 +22,9 @@
 <br/>
 {% if instruments %}
     {% for i in instruments %}
+<div class="row">
 
-    <!--<div class="boxes">-->
-        
-    <!--<div class="col-xs-7 col-sm-6 col-lg-8">-->
-        <!--<div class="row">-->
-<!--<div class="col-xs-6 col-lg-4">-->
-    <!--<div class="col-xs-12 col-sm-6 col-lg-8">-->
-        
+    <div class="col-xs-12 col-sm-6 col-lg-8">
         <h2> {{i.instrument_choice}} </h2>
         <h4> {{i.instrument_quantity}} in stock</h4> 
 
@@ -44,19 +39,15 @@
         <form method='get' action="{%url 'instrurent:rent_item' i.id %}">
             <input class= "aboutRent" type="submit" value="Rent Item" name="add"/>
         </form>
-       
-   
+    </div>
 
-<!--</div>-->
-      <!--<hr/>-->
+</div>
+      <hr/>
 
     {% endfor %}
              {% else %}
 <p>NONE</p>
 {% endif %}
- <!--</div>-->
- <!--</div>-->
- <!--</div>-->
-</center>
 
+</center>
 </div>
