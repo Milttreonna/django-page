@@ -7,7 +7,7 @@ from django.db import models
 # # Create your models here.
 class Instrument(models.Model):
     instrument_choice= models.CharField(max_length=25)
-    instrument_quantity= models.IntegerField(default=200)
+    instrument_quantity= models.IntegerField(default=50)
     instrument_description = models.CharField(max_length= 2000)
 
     instrument_price= models.FloatField(max_length=None)
