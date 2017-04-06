@@ -23,7 +23,7 @@
 {% if instruments %}
     {% for i in instruments %}
 <div class="col-md-6">
-<div class="boxes">
+<!--<div class="boxes">-->
     <div class="col-md-12">
         <h2> {{i.instrument_choice}} </h2>
         <h4> {{i.instrument_quantity}} in stock</h4> 
@@ -32,9 +32,9 @@
         
         <p> <br/>{{ i.instrument_description }}</p>
     </div>
-    </div>
+    <!--</div>-->
 
-<div class='boxes'>
+<!--<div class='boxes'>-->
     <div class="col-md-12">
         <h4>Price to rent (per week):</h4>
         <h3>{{ i.format_price }}</h3>
@@ -42,10 +42,12 @@
         <form method='get' action="{%url 'instrurent:rent_item' i.id %}">
             <input class= "aboutRent" type="submit" value="Rent Item" name="add"/>
         </form>
+        <hr/>
     </div>
-    </div>
+    <!--</div>-->
 
 </div>
+
             
 
 
