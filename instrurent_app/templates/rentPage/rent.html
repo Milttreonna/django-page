@@ -23,10 +23,11 @@
 {% if instruments %}
     {% for i in instruments %}
 <!--<div class="row">-->
+    <div class="boxes">
     <div class="col-xs-7 col-sm-6 col-lg-8">
 <!--<div class="col-xs-6 col-lg-4">-->
     <!--<div class="col-xs-12 col-sm-6 col-lg-8">-->
-        <div class="boxes">
+        
         <h2> {{i.instrument_choice}} </h2>
         <h4> {{i.instrument_quantity}} in stock</h4> 
 
@@ -42,7 +43,7 @@
             <input class= "aboutRent" type="submit" value="Rent Item" name="add"/>
         </form>
         </div>
-    </div>
+   
 
 <!--</div>-->
       <!--<hr/>-->
@@ -51,6 +52,7 @@
              {% else %}
 <p>NONE</p>
 {% endif %}
+ </div>
 </center>
 
 </div>
